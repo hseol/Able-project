@@ -7,45 +7,38 @@
             color : #000;
             font-family: 'Noto Sans KR', sans-serif;
     }
+
     .content-font {
         font-size : 22px;
     }
-
+    /* able과 네비게이션바 부분*/
     .header{
         display : flex;
         width : 100%;
         height : 96px;
         border-bottom :1px solid darkgray;
     }
-    .title {
 
+    .title > h1 {
         width : 300px;
         height : 96px;
-        text-align: center;
-        cursor:pointer;
-
-        margin-left : 170px;
-
-    }
-    .title > h1 {
         text-align: center;
         line-height : 96px;
         font-size:60px;
         font-weight : bold;
-        color : rgba(0,73,140,1)
+        color : rgba(0,73,140,1);
+        cursor:pointer;
+        margin-left : 170px;
     }
-
 
      .nav {
         display : flex;
-
         width : 448px;
         line-height : 96px;
         font-size : 24px;
         font-weight : bold;
         text-align: center;
     }
-
 
     .nav >li{
         flex : 1;
@@ -54,75 +47,68 @@
         text-align: center;
         flex-direction: column;
         align-items: center;
-
     }
-
+    /* 동호회 조회 큰 덩어리 */
     .content{
-
     text-align:center;
-    width : 1000px;
-    margin : 120px auto auto auto;
-
+    width : 800px;
+    margin : 80px auto auto auto;
     }
+    /* 동호회 조회하기 제목*/
     .content >  h1 {
     width : 237px;
     height : 50px;
     font-size : 35px;
     }
+    /* 조건 필터링 해서 검색 (파이썬으로 넘겨서 처리)*/
     .condition{
-        display : flex;
-        width : 500px;
+        width : 800px;
         margin : 40px auto auto auto;
-
     }
-    .condition > div{
-     /*   background: blue;*/
-        flex : 1;
-        font-size : 22px;
-
-    }
-    .condition>div > label {
-        font-size : 23px;
-    }
-    .condition >div>select {
+    /*지역명으로 검색, 종목명 검색*/
+    /* 미희님 ㅜㅜ 구분지어서 하고 싶었어서 ul로 묶었는데.. 아니면 알려주세요 ㅠㅠ */
+    .selecting{
+        display : flex;
         width : 167px;
         height : 41px;
         font-size : 22px;
-
     }
 
-    .searching {
-        display : flex;
-
+    .selecting >div{
+        flex:1;
+        font-size : 22px;
+    }
+/* 동호회 이름으로 검색*/
+    .searching{
+        font-size : 22px;
         width : 580px;
         height : 37px;
         margin : 3px auto auto auto;
     }
-    .search-text{
+    .searching > li{
         width : 137px;
-
-    }
-    .searching >div {
-        font-size : 22px;
     }
 
-    .searching > div > form > input {
+    .searching > div >  input {
         width : 350px;
         height : 37px;
         font-size : 22px;
-
     }
-    .searching > div > form >span{
-
+    /* 검색버튼.. 구림 ㅠㅠ*/
+    .searching > div > button{
         width : 50px;
         height : 37px;
         text-align : center;
         color :#fff;
         background: rgba(0,73,140,1);
-
-
-        cursor:pointer;
     }
+    /* 결과 뿌려줄 테이블*/
+    .table{
+    margin : 50px auto auto auto;
+    width : 800px;
+    }
+
+
 
 
 
