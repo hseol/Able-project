@@ -29,16 +29,22 @@ def club():
 def filter():
   select1 = request.form.get('areas')
   select2 = request.form.get('sports')
+  name=request.form.get('name')
   club_info = pd.read_csv('./app/main/static/files/club_info.csv')
   club_info = club_info[['CTPRVN_NM', 'SIGNGU_NM', 'ITEM_NM', 'TROBL_TY_NM', 'CLUB_NM', ]]
   club_info = club_info.fillna("-")
   conta1 = club_info['CTPRVN_NM'].str.contains(select1)
   conta2 = club_info['ITEM_NM'].str.contains(select2)
+  club_name=club_info['CLUB_NM'].str.contains(name)
+
+
   if select1 =='전체' :
     conta1 = True
   if select2 == '전체' :
     conta2 = True
-  condi= conta1 &conta2
+  if name=='':
+    club_name=True
+  condi= conta1 &conta2&club_name
   club_info2=club_info[condi]
   return render_template('club.html', title="동호회", club_info=club_info2)
 

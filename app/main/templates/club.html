@@ -27,7 +27,7 @@
                 </div>
                 <!--areaBased-->
                 <form class="condition" method="POST" action="/filter">
-                    <div class="selecting">
+                    <ul class="selecting">
                         <div>
                             <label for="area-select">시/도</label>
                             <select name="areas" id="area-select">
@@ -90,15 +90,15 @@
                                 <option value="펜싱">펜싱</option>
                             </select>
                         </div>
-                    </div>
+                    </ul>
                 <!--nameSearch-->
-                    <div class="searching">
-                        <div class="search-text">동호회 이름</div>
+                    <ul class="searching">
+                        <li>동호회 이름</li>
                         <div>
-                            <input type="search" placeholder="이름을 입력하세요">
+                            <input type="search" name="name" placeholder="이름을 입력하세요">
                             <button class="검색" type="submit" >검색</button>
                         </div>
-                    </div>
+                    </ul>
                 </form>
 
             </div>
