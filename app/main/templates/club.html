@@ -6,13 +6,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="../static/dist/css/clubstyle.css">
     </head>
+
     <body>
-
         <div class="club-page">
-
                 <!--header-->
             <div class="header">
                 <ul class="nav">
+                    <!-- navigation bar-->
                     <li><a href="/club">동호회</a></li>
                     <li><a href="#">체육시설</a></li>
                 </ul>
@@ -20,16 +20,11 @@
                     <h1><a href ="/">Able</a></h1>
                 </div>
             </div>
-
-
-
+            <!--동호회 조회하기-->
             <div class="content">
-
-                <!--동호회 조회하기-->
                 <div>
                     <h1 class="intro_text">동호회 조회하기</h1>
                 </div>
-
                 <!--areaBased-->
                 <form class="condition" method="POST" action="/filter">
                     <div class="selecting">
@@ -55,8 +50,8 @@
                                 <option value="경남">경남</option>
                                 <option value="제주">제주</option>
                             </select>
-
                         </div>
+                 <!--sportBased-->
                         <div>
                             <label for="sport-select">종목</label>
                             <select name="sports" id="sport-select">
@@ -96,7 +91,7 @@
                             </select>
                         </div>
                     </div>
-                <!--search-->
+                <!--nameSearch-->
                     <div class="searching">
                         <div class="search-text">동호회 이름</div>
                         <div>
@@ -105,9 +100,9 @@
                         </div>
                     </div>
                 </form>
+
             </div>
-
-
+            <!-- excel data print -->
             <div>
                 <center>
                     <table class="table" border="1" align="center">
@@ -116,32 +111,22 @@
                         <th>종목</th>
                         <th>장애유형</th>
                         <th>동호회명</th>
-
                         <tbody>
-
                             {% for key, value in club_info.iterrows() %}
-
-                                    <tr>
-                                        <td>{{value['CTPRVN_NM']}}</td>
-                                        <td>{{value['SIGNGU_NM']}}</td>
-                                        <td>{{value['ITEM_NM']}}</td>
-                                        <td>{{value['TROBL_TY_NM']}}</td>
-                                        <td>{{value['CLUB_NM']}}</td>
-                                    </tr>
+                            <tr>
+                                <td>{{value['CTPRVN_NM']}}</td>
+                                <td>{{value['SIGNGU_NM']}}</td>
+                                <td>{{value['ITEM_NM']}}</td>
+                                <td>{{value['TROBL_TY_NM']}}</td>
+                                <td>{{value['CLUB_NM']}}</td>
+                            </tr>
                             {% endfor %}
-
                         </tbody>
                     </table>
                 </center>
             </div>
 
-
-
         </div>
-
-
     </body>
-
-
 </html>
 
