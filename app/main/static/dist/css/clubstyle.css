@@ -53,6 +53,7 @@
     text-align:center;
     width : 800px;
     margin : 80px auto auto auto;
+
     }
     /* 동호회 조회하기 제목*/
     .content >  h1 {
@@ -64,40 +65,54 @@
     .condition{
         width : 800px;
         margin : 40px auto auto auto;
+
+      /*  background : pink; */
     }
     /*지역명으로 검색, 종목명 검색*/
     /* 미희님 ㅜㅜ 구분지어서 하고 싶었어서 ul로 묶었는데.. 아니면 알려주세요 ㅠㅠ */
     .selecting{
         display : flex;
-        width : 167px;
-        height : 41px;
+        width : 600px;
+        margin : auto;
+
+        /*width : 167px;
+        height : 41px; */
         font-size : 22px;
+
     }
 
     .selecting >div{
         flex:1;
         font-size : 22px;
     }
+    .selecting > div > select {
+     margin : 10px;
+    }
 /* 동호회 이름으로 검색*/
     .searching{
         font-size : 22px;
-        width : 580px;
-        height : 37px;
-        margin : 3px auto auto auto;
+        width : 600px;
+        height : 200px;
+        margin : 5px auto auto auto;
+        background : skyblue;
     }
     .searching > li{
         width : 137px;
+        background : red;
     }
 
-    .searching > div >  input {
+    .searching > div{
         width : 350px;
         height : 37px;
         font-size : 22px;
+
+        background : blue;
+
     }
     /* 검색버튼.. 구림 ㅠㅠ*/
     .searching > div > button{
-        width : 50px;
-        height : 37px;
+        width : 70px;
+       /* height : 37px;*/
         text-align : center;
         color :#fff;
         background: rgba(0,73,140,1);

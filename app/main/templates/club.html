@@ -4,8 +4,12 @@
 <html lang = "ko">
     <head>
         <link href = "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
-        <link rel = "stylesheet" type="text/css" href="../static/dist/css/clubstyle.css">
+
+
+
         <link rel="stylesheet" href="../static/dist/css/adminlte.css">
+        <link rel = "stylesheet" type="text/css" href="../static/dist/css/clubstyle.css">
+
     </head>
 
     <body>
@@ -54,7 +58,7 @@
                         </div>
                  <!--sportBased-->
                         <div>
-                            <label fo r= "sport-select">종목</label>
+                            <label for= "sport-select">종목</label>
                             <select name = "sports" id = "sport-select">
                                 <option value = "">전체</option>
                                 <option value = "검도">검도</option>
@@ -97,7 +101,9 @@
                         <li>동호회 이름</li>
                         <div>
                             <input type = "search" name = "name" placeholder = "이름을 입력하세요">
-                            <button class = "검색" type = "submit" >검색</button>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-default" >검색</button>
                         </div>
                     </ul>
                 </form>
