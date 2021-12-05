@@ -1,10 +1,8 @@
 import os
 from flask import Blueprint, render_template, redirect, url_for, request, send_from_directory
 import pandas as pd
-<<<<<<< HEAD
 
-=======
->>>>>>> upstream/main
+
 user_route = Blueprint('user_route', __name__)
 img_dir = './app/main/static/image/'
 rank = pd.read_csv('./app/main/static/files/rank.csv')
@@ -58,13 +56,11 @@ def internal_error(err):
 
 @user_route.route('/club', methods=['GET'])
 def club():
-<<<<<<< HEAD
   club_info = pd.read_csv('./app/main/static/files/club_info.csv')
-=======
   club_info = board.copy()
->>>>>>> upstream/main
   club_info = club_info[['CTPRVN_NM', 'SIGNGU_NM', 'ITEM_NM', 'TROBL_TY_NM', 'CLUB_NM', ]]
   club_info = club_info.fillna("-")
+
 
   return render_template('club.html', title="동호회", club_info=club_info)
 
@@ -73,17 +69,13 @@ def filter():
   select1 = request.form.get('areas')
   select2 = request.form.get('sports')
   name=request.form.get('name')
-<<<<<<< HEAD
   club_info = pd.read_csv('./app/main/static/files/club_info.csv')
-=======
   club_info = board.copy()
->>>>>>> upstream/main
   club_info = club_info[['CTPRVN_NM', 'SIGNGU_NM', 'ITEM_NM', 'TROBL_TY_NM', 'CLUB_NM', ]]
   club_info = club_info.fillna("-")
   conta1 = club_info['CTPRVN_NM'].str.contains(select1)
   conta2 = club_info['ITEM_NM'].str.contains(select2)
   club_name = club_info['CLUB_NM'].str.contains(name)
-
 
   if select1 =='전체' :
     conta1 = True
@@ -93,10 +85,4 @@ def filter():
     club_name = True
   condi = conta1 &conta2&club_name
   club_info2 = club_info[condi]
-<<<<<<< HEAD
   return render_template('club.html', title="동호회", club_info=club_info2)
-
-
-=======
-  return render_template('club.html', title="동호회", club_info=club_info2)
->>>>>>> upstream/main
